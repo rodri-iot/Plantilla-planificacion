@@ -5,32 +5,32 @@
 
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Título del proyecto} 
+\titulo{Sistema de monitoreo de calidad del aire} 
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
-\posgrado{Carrera de Especialización en Sistemas Embebidos} 
-%\posgrado{Carrera de Especialización en Internet de las Cosas} 
+%\posgrado{Carrera de Especialización en Sistemas Embebidos} 
+\posgrado{Carrera de Especialización en Internet de las Cosas} 
 %\posgrado{Carrera de Especialización en Inteligencia Artificial}
 %\posgrado{Maestría en Sistemas Embebidos} 
 %\posgrado{Maestría en Internet de las cosas}
 
 % Tu nombre, se puede usar el cualquier lugar del documento con el comando \authorname
 % IMPORTANTE: no omitir titulaciones ni tildación en los nombres, también se recomienda escribir los nombres completos (tal cual los tienen en su documento)
-\autor{Título y Nombre del autor}
+\autor{Ing. Rodrigo Jurgen Pinedo Nava}
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Título y Nombre del director}
+\director{Por definir}
 \pertenenciaDirector{pertenencia} 
 \codirector{} % para que aparezca en la portada se debe descomentar la opción codirector en los parámetros de documentclass
 \pertenenciaCoDirector{FIUBA}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
-\cliente{Nombre del cliente}
-\empresaCliente{Empresa del cliente}
+\cliente{Rodrigo Jurgen Pinedo Nava}
+\empresaCliente{Emprendimiento personal}
  
-\fechaINICIO{30 de abril de 2023}		%Fecha de inicio de la cursada de GdP \fechaInicioName
-\fechaFINALPlan{18 de junio de 2023} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{15 de mayo de 2024}	%Fecha de defensa pública del trabajo final
+\fechaINICIO{10 de marzo de 2025}		%Fecha de inicio de la cursada de GdP \fechaInicioName
+\fechaFINALPlan{29 de abril de 2025} 	%Fecha de final de cursada de GdP
+\fechaFINALTrabajo{30 de junio de 2025}	%Fecha de defensa pública del trabajo final
 
 
 \begin{document}
@@ -85,7 +85,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en \textcolor{red}{la implementación de un prototipo de un sistema de control de temperatura de una caldera industrial}. El trabajo tendrá un presupuesto preliminar estimado de \textcolor{red}{600} horas y un costo estimado de \textcolor{red}{\$ XXX}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en {la implementación de una red de sensores especializados para la medición de partículas en suspensión (PM2.5), dióxido de carbono (CO2), compuestos orgánicos volátiles (VOCs), temperatura y humedad ambienta para la recopilación y transmisión de datos en tiempo real}. El trabajo tendrá un presupuesto preliminar estimado de \textcolor{red}{600} horas y un costo estimado de \textcolor{red}{\$ XXX}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -106,52 +106,56 @@ Se adjunta a esta acta la planificación inicial.
 \section{1. Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
-\begin{consigna}{red} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
-El objetivo es que el lector, en una o dos páginas, exponga de qué se trata el proyecto y cuáles son sus desafíos, cuál es la motivación para realizarlo y su importancia.
+La contaminación del aire es un problema crítico que afecta tanto a entornos urbanos como industriales, con consecuencias directas sobre la salud pública y el medio ambiente. En Argentina, la situación es alarmante: según la Organización Mundial de la Salud (OMS), el aire en el país tiene una media anual de 13 µg/m³ de partículas PM2.5, superando en un 30\% el nivel considerado seguro por la organización. En Buenos Aires, esta media anual asciende a 14 µg/m³, lo que implica un 40\% por encima del límite recomendado. Estas cifras se traducen en consecuencias graves, como la muerte anual de 85 niños por enfermedades vinculadas a la contaminación del aire en Argentina.
 
-Se debe introducir el contexto del proyecto, el estado del arte en la temática, describir la propuesta de valor, cuál es el problema que atiende y cuál es la solución que se propone. Se debe dar una descripción funcional de la solución que incluya un diagrama en bloques.
+Este proyecto nace como un emprendimiento personal con el propósito de monitorear la calidad del aire en entornos industriales y urbanos, proporcionando información clave para la toma de decisiones. Actualmente, muchas ciudades y empresas carecen de sistemas eficientes y accesibles para medir en tiempo real la calidad del aire, lo cual dificulta la prevención y el control de la contaminación. El objetivo es llenar ese vacío con una solución tecnológica asequible y escalable.
 
-Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
-
-\begin{itemize}
-	\item ¿Cuál es el contexto del proyecto, es un emprendimiento personal, un proyecto para una empresa, es parte del programa de vinculación con empresas del posgrado?
-	\item ¿Existen o aplican condiciones especiales al proyecto, financiamiento de algún programa público o privado, acuerdos de confidencialidad, acuerdos sobre la propiedad intelectual de los entregables u otros?
-	\item ¿Cómo se compara la solución propuesta con el estado del arte en el campo de aplicación? ¿En qué aspectos destaca?
-	\item ¿Ayuda a la explicación si se incluye un lienzo Canvas del Modelo de Negocio?
-	\item ¿En qué estado del ciclo de vida está la solución que se propone?
-	\item ¿Cuáles son las características del cliente (el adoptante de los entregables del proyecto) qué valora, qué necesita?
-	\item ¿Por dónde pasa la innovación?
-\end{itemize}
-
-La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema} y descripción funcional de la solución propuesta.
-
-Las figuras se deben mencionar en el texto ANTES de que aparezcan con una frase como la siguiente: ``En la figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...''.  La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
+Se propone desarrollar un sistema de monitoreo basado en una red de sensores y la tecnología internet de las cosas (IoT). El sistema será capaz de detectar partículas en el aire (PM2.5), niveles de CO2, compuestos químicos dañinos, temperatura y humedad. Los datos obtenidos serán enviados a una plataforma accesible desde cualquier dispositivo. Los dispositivos estarán conectados mediante LoRaWAN y WiFi/MQTT, almacenando datos de manera eficiente y presentándose en una plataforma intuitiva. Revisar la Figura 1 para comprender el diagrama de bloques del sistema de monitoreo.
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.65\textwidth]{./Figuras/diagBloques.png}
+\includegraphics[width=.65\textwidth]{./Figuras/fig_1-diagBloques.png}
 \caption{Diagrama en bloques del sistema.}
 \label{fig:diagBloques}
 \end{figure}
 
+Este proyecto está diseñado como una solución adaptable, principalmente para implementarse en empresas, con la capacidad de escalar a hogares y gobierno. Todos los usuarios comparten una preocupación en común: la calidad del aire y su impacto en la salud. El sistema no solo permite el monitoreo en tiempo real, sino también envía alertas cuando los niveles de contaminación superan los límites recomendados. También ofrece herramientas para analizar datos históricos e identificar tendencias, que permitan tomar decisiones oportunas. Más que una simple innovación tecnológica, este proyecto representa una herramienta clave para mejorar la calidad de vida y promover un entorno más saludable y sostenible.
+
+En el mercado actual existen soluciones para el monitoreo de la calidad del aire, sin embargo, muchas de ellas presentan limitaciones, como ser:
+\begin{itemize}
+	\item Costos elevados, en las etapas de implementación y mantenimiento, un sistema con carácteristicas similares puede volverse solo accesible a instituciones con grandes presupuestos.
+	\item Cobertura limitada, ya que la mayoría de los sensores requieren cableado o dependencias de redes WiFi con alcance reducido.
+	\item Falta de integración con plataformas acceesibles, lo que dificulta el análisis y la interpretación de los datos por parte de usuarios sin conocimientos técnicos avanzados.
+\end{itemize}
+
+A diferencia de estas soluciones, este proyeto esrtará diseñado como una solución flexible y adaptable a  empresas, hogares y gobiernos. Su propuesta de valor se basa en ofrecer un monitoreo ambiental accesible, para lograr entornos seguros y sostenibles, bajo los siguientes aspectos:
+
+\begin{itemize}
+	\item \textbf{Accesibilidad:} Una solución asequible en comparación con otros sistemas comerciales.
+	\item \textbf{Escalabilidad:} Implementación modular, adaptable a distintos entornos y necesidades.
+	\item \textbf{Interfaz intuitiva:} Plataforma accesible para cualquier usuario, sin necesidad de conocimientos técnicos avanzados.
+	\item \textbf{Conectividad eficiente:} Uso de tecnologías de comunicación de bajo consumo y gran alcance.
+	\item \textbf{Toma de decisiones informada:} Alertas y análisis de datos para implementar medidas de mitigación de contaminación.
+\end{itemize}
+
+El proyecto se encuentra en una etapa inicial de desarrollo, y para su primera versión se plantea una solución funcional, enfocada en validar su desempeño en entornos reales. En esta fase, el sistema ofrecerá dos modalidades de monitoreo que permitirán a los usuarios gestionar sus dispositivos de manera flexible:  
+
+\begin{itemize}
+    \item \textbf{Monitoreo privado:} Cada usuario podrá registrar y gestionar sus propios dispositivos, accediendo a la información en tiempo real de los sensores vinculados.  
+    \item \textbf{Monitoreo público:} Si el usuario así lo decide, podrá compartir los datos recopilados con la comunidad, permitiendo que la información esté disponible en una red abierta. Esto fomentará la creación de un ecosistema colaborativo.  
+\end{itemize}
+
+En esta primera versión, no se implementarán modelos de suscripción, ni esquemas de pago, ya que el objetivo principal es desarrollar un prototipo funcional. Este proyecto permitaraá evaluar la viabilidad técnica y el impacto del sistema en distintos escenarios de uso.  
+
+A futuro, se prevé la integración de herramientas más avanzadas, como modelos de análisis predictivo basados en inteligencia artificial y funcionalidades adicionales para mejorar la toma de decisiones en entornos urbanos e industriales. Con esta estrategia de crecimiento progresivo, el proyecto busca garantizar una implementación accesible y escalable, permitiendo que cada vez más usuarios se beneficien de un monitoreo ambiental confiable desde su primera versión.
+
+
+
 \vspace{25px}
 
-El tamaño del texto en TODAS las figuras debe ser adecuado \textbf{para que NO pase lo que ocurre en la figura \ref{fig:diagBloques}}, donde el lector debe esforzarse para poder leer el texto. 
-
-Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama. Se recomienda evitar colores primarios (como rojo, verde o cyan) y usar la gama de colores pastel.
-
-\end{consigna} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
 
 \section{2. Identificación y análisis de los interesados}
 \label{sec:interesados}
-
-\begin{consigna}{red} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
-\textbf{Nota importante:} borrar esto y todas las consignas en color rojo antes de entregar este documento). Esto se hace eliminando el par de comandos que forman el bloque consigna, \verb!\begin{consigna}{red}! y \verb!\end{consigna}{red}! del código. 
- 
-Es inusual que una misma persona esté en más de un rol, incluso en proyectos chicos. Si se considera que una persona cumple dos o más roles, entonces \textbf{solo dejarla en el rol más importante}. 
-
-Por ejemplo, si una persona es Cliente pero también colabora u orienta, dejarla solo como Cliente. Si una persona es el Responsable, \textbf{no debe ser colocado también como miembro del equipo}.
-
 
 \begin{table}[ht]
 %\caption{Identificación de los interesados}
@@ -160,90 +164,126 @@ Por ejemplo, si una persona es Cliente pero también colabora u orienta, dejarla
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
-Auspiciante   &                   &              	&        	\\ \hline
+Auspiciante   & -                 & -             	& -       	\\ \hline
 Cliente       & \clientename      &\empclientename	&        	\\ \hline
-Impulsor      &                   &              	&        	\\ \hline
+Impulsor      & -                 & -             	& -       	\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
-Colaboradores &                   &              	&        	\\ \hline
+Colaboradores & -                 & -             	& -       	\\ \hline
 Orientador    & \supname	      & \pertesupname 	& Director del Trabajo Final \\ \hline
-Equipo        & miembro1 \newline 
-				miembro2          &              	&        	\\ \hline
-Opositores    &                   &              	&        	\\ \hline
-Usuario final &                   &              	&        	\\ \hline
+Equipo        & -                 & -             	& -       	\\ \hline
 \end{tabularx}
 \end{table}
-
-El Director suele ser uno de los orientadores.
-
-No dejar celdas vacías; si no hay nada que poner en una celda colocar un signo ``-''.
-
-No dejar filas vacías; si no hay nada que poner en una fila entonces eliminarla.
-
-Es deseable listar a continuación las principales características de cada interesado.
- 
-Por ejemplo:
-\begin{itemize}
-	\item Orientador: la Dra. Ing. María Gómez es experta en la temática y va a ayudar con la definición de los requerimientos y el desarrollo del firmware del embebido.
-	\item Auspiciante: es riguroso y exigente con la rendición de gastos. Tener mucho cuidado con esto.
-	\item Equipo: Juan Perez, suele pedir licencia porque tiene un familiar con una enfermedad. Planificar considerando esto.
-\end{itemize}
-
-\end{consigna} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
 
 
 \section{3. Propósito del proyecto}
 \label{sec:proposito}
 
-\begin{consigna}{red} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
-
-¿Por qué se hace el proyecto? ¿Qué se quiere lograr? 
-
-Se recomienda que sea solo un párrafo que continúe con la idea de la frase ``el propósito de este proyecto es...'' (omitir la frase, ya que está en el título de la sección).
-\end{consigna}
+El propósito de este proyecto es fomentar entornos más saludables, seguros y sostenibles en zonas urbanas e industriales, mejorando la calidad del aire. Esto se logrará mediante un sistema de monitoreo basado en IoT, permitiendo recopilar, analizar y visualizar datos ambientales en tiempo real. Con esta herramienta, se busca facilitar la identificación de fuentes de contaminación y alertar para que las partes interesadas tomen acciones correctivas oportunas. Además, la solución ha sido diseñada para ser escalable, accesible y eficiente, asegurando su adaptabilidad a distintos entornos y necesidades.
 
 \section{4. Alcance del proyecto}
 \label{sec:alcance}
 
-\begin{consigna}{red}
-¿Qué se incluye y que no se incluye en este proyecto?
-
-Se refiere al trabajo que se va a hacer para entregar el producto o resultado especificado. 
-
-Explicitar todo lo quede comprendido dentro del alcance del proyecto. Por ejemplo:
+Este proyecto abarca el desarrollo e implementación de un sistema de monitoreo de calidad del aire basado en IoT. El sistema será capáz de medir (recolectar), transmitir, almacenar y mostrar datos en tiempo real, proporcionando información clave para la toma de deciciones.
 
 El proyecto incluye:
+
+\textbf{Dispositivos IoT (Nodos de Sensores)}
 \begin{itemize}
-	\item Ítem 1.
-	\item Ítem 2.
-		\begin{itemize}
-		\item Subítem 1.
-		\item Subítem 2.
-		\item ...
-		\end{itemize}
-	\item ...
+	\item Microcontrolador: ESP32-S3 (por su conectividad WiFi/BLE, bajo consumo y módulo LoRa con antena incluido).
+	\item Sensores:
+	\begin{itemize}
+		\item PM2.5/PM10: Sensor SDS011 o PMS5003 (mide partículas en suspensión).
+		\item CO2: Sensor MH-Z19B o SCD30 (mide dióxido de carbono).
+		\item VOCs: Sensor CCS811 o SGP30 (detecta compuestos orgánicos volátiles).
+		\item Temperatura y Humedad: DHT22 o BME280.
+	\end{itemize}
+
+	\item Comunicación:
+	\begin{itemize}
+		\item LoRaWAN para áreas extensas (ej: ciudades) o WiFi/MQTT para interiores.
+		\item Protocolo MQTT para enviar datos al servidor.
+		\item Módulo Lora Sx1262 (incluido en el ESP32 de Heltec).
+	\end{itemize}
+
+	\item Alimentación: Batería recargable o USB (interiores).
+\end{itemize}
+
+\textbf{Servidor y Almacenamiento de Datos}
+\begin{itemize}
+
+	\item Protocolo de recepción: MQTT (usando brokers como Mosquitto, AWS IoT Core).
+	
+	\item Base de datos:
+	\begin{itemize}
+		\item Time-Series Database: InfluxDB (optimizada para datos temporales como lecturas de sensores).
+		\item SQL/NoSQL: PostgreSQL o MongoDB (para consultas complejas).	
+	\end{itemize}
+	
+	\item Procesamiento inicial:
+	\begin{itemize}
+		\item Validación de datos (eliminar valores atípicos).
+		\item Normalización de unidades (ej: convertir ppm de CO2 a mg/m³).
+	\end{itemize}
+
+\end{itemize}
+
+\textbf{Aplicativo Web/Móvil}
+\begin{itemize}
+	\item Frontend:
+	\begin{itemize}
+		\item Framework: React.js o Vue.js para dashboards interactivos.
+		\item Librerías de visualización: Chart.js, D3.js o Grafana integrado.
+	\end{itemize}
+	
+	\item Backend:
+	\begin{itemize}
+		\item API REST: Desarrollada en Node.js o Python (Django/Flask).
+		\item Autenticación: JWT o OAuth2 para acceso seguro.
+	\end{itemize}
+	
+	\item Características del aplicativo:
+	\begin{itemize}
+		\item Mapa en tiempo real con colores según el índice de calidad del aire.
+		\item Gráficos históricos (tendencias de PM2.5, CO2, etc.).
+		\item Alertas personalizables (notificaciones push).
+		\item Descarga de informes en PDF/CSV. (deseado)	
+	\end{itemize}		
 	
 \end{itemize}
 
-Explicitar además todo lo que no quede incluido (``El presente proyecto no incluye...'')
+\textbf{Flujo de Datos}
+\begin{itemize}
+	\item Recolección: Los sensores capturan datos cada 1-5 minutos.
+	\item Transmisión: El ESP32 envía los datos vía MQTT/LoRaWAN al broker.
+	\item Almacenamiento: El servidor procesa y guarda los datos en InfluxDB.
+	\item Visualización: El aplicativo web consulta la API para mostrar datos en dashboards.
+\end{itemize}
 
-\end{consigna} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
+El presente proyecto no incluye:
+\begin{itemize}
+	\item Desarrollo de modelos de suscripción o monetización, ya que en esta fase el enfoque es la validación del prototipo.
+	\item Integración con inteligencia artificial o modelos predictivos avanzados.
+	\item Implementación de una red de sensores a gran escala más allá del piloto inicial.
+	\item Certificaciones oficiales de calidad del aire, ya que el sistema servirá como referencia complementaria a mediciones gubernamentales o institucionales.
+\end{itemize}
 
+El alcance del proyecto está limitado a ser considerado un prototipo, enfocado en validar la viabilidad técnica y operativa. Las futuras versiones podrán incorporar mejoras basadas en los resultados de esta etapa.
 
 \section{5. Supuestos del proyecto}
 \label{sec:supuestos}
 
-\begin{consigna}{red} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
-``Para el desarrollo del presente proyecto se supone que: ...''
+Para el desarrollo del presente proyecto se supone que:
 
 \begin{itemize}
-	\item Supuesto 1.
-	\item Supuesto 2.
-	\item ...
+	\item \textbf{Disponibilidad financiera:} Dado que se trata de un emprendimiento personal, los costos del proyecto serán cubiertos por el responsable del proyecto.
+	\item \textbf{Disponibilidad tecnológica:} Se cuenta con acceso a los sensores, microcontroladores y todos los componentes necesarios para la fabricación de los dispositovos IoT.
+	\item \textbf{Factibilidad técnica:} Se asume que el diseño e implementación del sistema representa un reto que es el resultado de poner en práctica de lo aprendido en la especialización en IoT de la Universidad de Buenos Aires.
+	\item \textbf{Tiempo:} El responsable debe cumplir con su planificación a ser propuesta, evitando retrasos y culminando el proyecto de manera satisfactoria.
+	\item \textbf{Infraestructura de comunicación:} Se realizarán pruebas en entornos controlados asegurando que se cumple con la cobertura de la red LoRaWAN. En el caso de entornos cerrados se verificara la transmisión estable mediante WiFi/MQTT. De esta manera se asegura que los datos sean enviados para su visualización en línea, gracias al internet.
+	\item \textbf{Consideración como prototipo:} En esta primera versión, el sistema se desarrollará como un prototipo funcional, con el objetivo de validar su desempeño y detectar oportunidades de mejora.
+	\item \textbf{Aceptación del usuario:} Se espera que empresas, ciudadanos, ONGs y gobiernos muestren interes en utilizar la plataforma, incentivando un modelo de monitoreo colaborativo de la calidad del aire.
+
 \end{itemize}
-
-Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y recursos humanos y materiales, sobre la factibilidad técnica de distintos aspectos del proyecto, sobre otras cuestiones que sean necesarias para el éxito del proyecto como condiciones macroeconómicas o reglamentarias.
-
-\end{consigna} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
 
 \section{6. Requerimientos}
 \label{sec:requerimientos}
