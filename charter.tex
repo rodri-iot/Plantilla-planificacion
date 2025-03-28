@@ -25,7 +25,7 @@
 \pertenenciaCoDirector{FIUBA}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
-\cliente{Rodrigo Jurgen Pinedo Nava}
+\cliente{Ing. Jose Mauricio Vargas Nuñez}
 \empresaCliente{Emprendimiento personal}
  
 \fechaINICIO{10 de marzo de 2025}		%Fecha de inicio de la cursada de GdP \fechaInicioName
@@ -59,6 +59,8 @@
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
+1      & Se completa hasta el punto 5 inclusive                 & 20 de marzo de 2025 \\ \hline
+2      & Se completa hasta el punto 9 inclusive                 & 28 de marzo de 2025 \\ \hline
 %1      & Se completa hasta el punto 5 inclusive                & {día} de {mes} de 202X \\ \hline
 %2      & Se completa hasta el punto 9 inclusive
 %		  Se puede agregar algo más \newline
@@ -85,7 +87,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en {la implementación de una red de sensores especializados para la medición de partículas en suspensión (PM2.5), dióxido de carbono (CO2), compuestos orgánicos volátiles (VOCs), temperatura y humedad ambienta para la recopilación y transmisión de datos en tiempo real}. El trabajo tendrá un presupuesto preliminar estimado de \textcolor{red}{600} horas y un costo estimado de \textcolor{red}{\$ XXX}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en {la implementación de una red de sensores especializados para la medición de partículas en suspensión, dióxido de carbono, compuestos orgánicos volátiles, temperatura y humedad ambiental para la recopilación y transmisión de datos en tiempo real}. El trabajo tendrá un presupuesto preliminar estimado de {600} horas y un costo estimado de {\$ 500}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -106,11 +108,11 @@ Se adjunta a esta acta la planificación inicial.
 \section{1. Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
-La contaminación del aire es un problema crítico que afecta tanto a entornos urbanos como industriales, con consecuencias directas sobre la salud pública y el medio ambiente. En Argentina, la situación es alarmante: según la Organización Mundial de la Salud (OMS), el aire en el país tiene una media anual de 13 µg/m³ de partículas PM2.5, superando en un 30\% el nivel considerado seguro por la organización. En Buenos Aires, esta media anual asciende a 14 µg/m³, lo que implica un 40\% por encima del límite recomendado. Estas cifras se traducen en consecuencias graves, como la muerte anual de 85 niños por enfermedades vinculadas a la contaminación del aire en Argentina.
+La contaminación del aire es un problema crítico que afecta tanto a entornos urbanos como industriales, con consecuencias directas sobre la salud pública y el medio ambiente. En Argentina, la situación es alarmante. Según la Organización Mundial de la Salud (OMS), el aire en el país tiene una media anual de 13 µg/m³ de partículas PM2.5, superando en un 30\% el nivel considerado seguro por la organización. En Buenos Aires, esta media anual asciende a 14 µg/m³, lo que implica un 40\% por encima del límite recomendado. Estas cifras se traducen en consecuencias graves, como la muerte anual de 85 niños por enfermedades vinculadas a la contaminación del aire en Argentina.
 
-Este proyecto nace como un emprendimiento personal con el propósito de monitorear la calidad del aire en entornos industriales y urbanos, proporcionando información clave para la toma de decisiones. Actualmente, muchas ciudades y empresas carecen de sistemas eficientes y accesibles para medir en tiempo real la calidad del aire, lo cual dificulta la prevención y el control de la contaminación. El objetivo es llenar ese vacío con una solución tecnológica asequible y escalable.
+Este proyecto nace como un emprendimiento personal con el propósito de monitorear la calidad del aire en entornos industriales y urbanos y proporcionar información clave para la toma de decisiones. Actualmente, muchas ciudades y empresas carecen de sistemas eficientes y accesibles para medir en tiempo real la calidad del aire, lo que dificulta la prevención y el control de la contaminación. El objetivo es llenar ese vacío con una solución tecnológica asequible y escalable.
 
-Se propone desarrollar un sistema de monitoreo basado en una red de sensores y la tecnología internet de las cosas (IoT). El sistema será capaz de detectar partículas en el aire (PM2.5), niveles de CO2, compuestos químicos dañinos, temperatura y humedad. Los datos obtenidos serán enviados a una plataforma accesible desde cualquier dispositivo. Los dispositivos estarán conectados mediante LoRaWAN y WiFi/MQTT, almacenando datos de manera eficiente y presentándose en una plataforma intuitiva. Revisar la Figura 1 para comprender el diagrama de bloques del sistema de monitoreo.
+Se propone desarrollar un sistema de monitoreo basado en una red de sensores y la tecnología internet de las cosas (IoT). El sistema será capaz de detectar partículas en el aire tales como PM2.5, niveles de CO2, compuestos químicos dañinos, temperatura y humedad. Los datos obtenidos serán enviados a una plataforma accesible desde un aplicativo web. Los dispositivos estarán conectados mediante LoRaWAN y WiFi/MQTT, almacenarán datos de manera eficiente y se presentarán en una plataforma intuitiva. Revisar la Figura 1 para comprender el diagrama de bloques del sistema de monitoreo.
 
 \begin{figure}[htpb]
 \centering 
@@ -119,35 +121,35 @@ Se propone desarrollar un sistema de monitoreo basado en una red de sensores y l
 \label{fig:diagBloques}
 \end{figure}
 
-Este proyecto está diseñado como una solución adaptable, principalmente para implementarse en empresas, con la capacidad de escalar a hogares y gobierno. Todos los usuarios comparten una preocupación en común: la calidad del aire y su impacto en la salud. El sistema no solo permite el monitoreo en tiempo real, sino también envía alertas cuando los niveles de contaminación superan los límites recomendados. También ofrece herramientas para analizar datos históricos e identificar tendencias, que permitan tomar decisiones oportunas. Más que una simple innovación tecnológica, este proyecto representa una herramienta clave para mejorar la calidad de vida y promover un entorno más saludable y sostenible.
+Este proyecto está diseñado como una solución adaptable, principalmente para implementarse en empresas, con la capacidad de escalar a hogares y gobiernos. Todos los usuarios comparten una preocupación en común, la calidad del aire y su impacto en la salud. El sistema no solo permite el monitoreo en tiempo real, sino también envía alertas cuando los niveles de contaminación superan los límites recomendados. También ofrece herramientas para analizar datos históricos e identificar tendencias, que permitan tomar decisiones oportunas. Más que una simple innovación tecnológica, este proyecto representa una herramienta clave para mejorar la calidad de vida y promover un entorno más saludable y sostenible.
 
-En el mercado actual existen soluciones para el monitoreo de la calidad del aire, sin embargo, muchas de ellas presentan limitaciones, como ser:
+En el mercado actual existen soluciones para el monitoreo de la calidad del aire, sin embargo, muchas de ellas presentan limitaciones, como pueden ser:
 \begin{itemize}
-	\item Costos elevados, en las etapas de implementación y mantenimiento, un sistema con carácteristicas similares puede volverse solo accesible a instituciones con grandes presupuestos.
-	\item Cobertura limitada, ya que la mayoría de los sensores requieren cableado o dependencias de redes WiFi con alcance reducido.
-	\item Falta de integración con plataformas acceesibles, lo que dificulta el análisis y la interpretación de los datos por parte de usuarios sin conocimientos técnicos avanzados.
+	\item Costos elevados: en las etapas de implementación y mantenimiento, un sistema con carácteristicas similares puede volverse solo accesible a instituciones con grandes presupuestos.
+	\item Cobertura limitada: debido a que la mayoría de los sensores requieren cableado o dependencias de redes WiFi con alcance reducido.
+	\item Falta de integración con plataformas acceesibles: lo que dificulta el análisis y la interpretación de los datos por parte de usuarios sin conocimientos técnicos avanzados.
 \end{itemize}
 
-A diferencia de estas soluciones, este proyeto esrtará diseñado como una solución flexible y adaptable a  empresas, hogares y gobiernos. Su propuesta de valor se basa en ofrecer un monitoreo ambiental accesible, para lograr entornos seguros y sostenibles, bajo los siguientes aspectos:
+A diferencia de las soluciones, este proyecto estará diseñado como una solución flexible y adaptable a  empresas, hogares y gobiernos. Su propuesta de valor se basa en ofrecer un monitoreo ambiental accesible, para lograr entornos seguros y sostenibles, bajo los siguientes aspectos:
 
 \begin{itemize}
-	\item \textbf{Accesibilidad:} Una solución asequible en comparación con otros sistemas comerciales.
-	\item \textbf{Escalabilidad:} Implementación modular, adaptable a distintos entornos y necesidades.
-	\item \textbf{Interfaz intuitiva:} Plataforma accesible para cualquier usuario, sin necesidad de conocimientos técnicos avanzados.
-	\item \textbf{Conectividad eficiente:} Uso de tecnologías de comunicación de bajo consumo y gran alcance.
-	\item \textbf{Toma de decisiones informada:} Alertas y análisis de datos para implementar medidas de mitigación de contaminación.
+	\item Accesibilidad: una solución asequible en comparación con otros sistemas comerciales.
+	\item Escalabilidad: implementación modular, adaptable a distintos entornos y necesidades.
+	\item Interfaz intuitiva: plataforma accesible para cualquier usuario, sin necesidad de conocimientos técnicos avanzados.
+	\item Conectividad eficiente: uso de tecnologías de comunicación de bajo consumo y gran alcance.
+	\item Toma de decisiones informada: alertas y análisis de datos para implementar medidas de mitigación de contaminación.
 \end{itemize}
 
-El proyecto se encuentra en una etapa inicial de desarrollo, y para su primera versión se plantea una solución funcional, enfocada en validar su desempeño en entornos reales. En esta fase, el sistema ofrecerá dos modalidades de monitoreo que permitirán a los usuarios gestionar sus dispositivos de manera flexible:  
+El proyecto se encuentra en una etapa inicial de desarrollo. Para su primera versión se plantea una solución funcional, enfocada en validar su desempeño en entornos reales. En esta fase, el sistema ofrecerá dos modalidades de monitoreo que permitirán a los usuarios gestionar sus dispositivos de manera flexible:  
 
 \begin{itemize}
-    \item \textbf{Monitoreo privado:} Cada usuario podrá registrar y gestionar sus propios dispositivos, accediendo a la información en tiempo real de los sensores vinculados.  
-    \item \textbf{Monitoreo público:} Si el usuario así lo decide, podrá compartir los datos recopilados con la comunidad, permitiendo que la información esté disponible en una red abierta. Esto fomentará la creación de un ecosistema colaborativo.  
+    \item Monitoreo privado: cada usuario podrá registrar y gestionar sus propios dispositivos, accediendo a la información en tiempo real de los sensores vinculados.  
+    \item Monitoreo público: si el usuario así lo decide, podrá compartir los datos recopilados con la comunidad, permitiendo que la información esté disponible en una red abierta. Esto fomentará la creación de un ecosistema colaborativo.  
 \end{itemize}
 
-En esta primera versión, no se implementarán modelos de suscripción, ni esquemas de pago, ya que el objetivo principal es desarrollar un prototipo funcional. Este proyecto permitaraá evaluar la viabilidad técnica y el impacto del sistema en distintos escenarios de uso.  
+En esta primera versión no se implementarán modelos de suscripción ni esquemas de pago, ya que el objetivo principal es desarrollar un prototipo funcional. Este proyecto permitará evaluar la viabilidad técnica y el impacto del sistema en distintos escenarios de uso.  
 
-A futuro, se prevé la integración de herramientas más avanzadas, como modelos de análisis predictivo basados en inteligencia artificial y funcionalidades adicionales para mejorar la toma de decisiones en entornos urbanos e industriales. Con esta estrategia de crecimiento progresivo, el proyecto busca garantizar una implementación accesible y escalable, permitiendo que cada vez más usuarios se beneficien de un monitoreo ambiental confiable desde su primera versión.
+A futuro se integrará inteligencia artificial (IA) para análisis predictivo y se aumentarán funcionalidades para mejorar la toma de decisiones urbanas e industriales. El proyecto busca un crecimiento accesible y escalable, garantizando que cada usuario se beneficien de un monitoreo ambiental confiable desde su primera versión.
 
 
 
@@ -158,105 +160,48 @@ A futuro, se prevé la integración de herramientas más avanzadas, como modelos
 \label{sec:interesados}
 
 \begin{table}[ht]
-%\caption{Identificación de los interesados}
+%caption{Identificación de los interesados}
 %\label{tab:interesados}
-\begin{tabularx}{\linewidth}{@{}|l|X|X|l|@{}}
+\begin{tabularx}{\linewidth}{@{}|*{4}{>{\arraybackslash}X|}@{}}
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
-Auspiciante   & -                 & -             	& -       	\\ \hline
+% Auspiciante   & -                 & -             	& -       	\\ \hline
 Cliente       & \clientename      &\empclientename	&        	\\ \hline
-Impulsor      & -                 & -             	& -       	\\ \hline
+% Impulsor      & -                 & -             	& -       	\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
-Colaboradores & -                 & -             	& -       	\\ \hline
+% Colaboradores & -                 & -             	& -       	\\ \hline
 Orientador    & \supname	      & \pertesupname 	& Director del Trabajo Final \\ \hline
-Equipo        & -                 & -             	& -       	\\ \hline
+Usuario final & Industrias, hogares o gobiernos	&  Privada o pública & Autoridad o interés en monitoreo ambiental				\\
+\hline
+% Equipo        & -                 & -             	& -       	\\ \hline
 \end{tabularx}
 \end{table}
 
+\begin{itemize}
+	\item Cliente: Ing. Jose Mauricio Vargas Nuñez es quien propuso los requerimientos del proyecto.
+	\item Orientador: \supname es un profesional idóneo para la temática con especialidad en tecnologías IoT y LoRaWAN.
+\end{itemize}
 
 \section{3. Propósito del proyecto}
 \label{sec:proposito}
 
-El propósito de este proyecto es fomentar entornos más saludables, seguros y sostenibles en zonas urbanas e industriales, mejorando la calidad del aire. Esto se logrará mediante un sistema de monitoreo basado en IoT, permitiendo recopilar, analizar y visualizar datos ambientales en tiempo real. Con esta herramienta, se busca facilitar la identificación de fuentes de contaminación y alertar para que las partes interesadas tomen acciones correctivas oportunas. Además, la solución ha sido diseñada para ser escalable, accesible y eficiente, asegurando su adaptabilidad a distintos entornos y necesidades.
+El propósito de este proyecto es fomentar entornos más saludables, seguros y sostenibles en zonas urbanas e industriales, a partir de una mejora en la calidad del aire. Esto se logrará mediante un sistema de monitoreo basado en IoT, que permita recopilar, analizar y visualizar datos ambientales en tiempo real. Con esta herramienta, se busca facilitar la identificación de fuentes de contaminación y alertar para que las partes interesadas tomen acciones correctivas oportunas. Además, se busca que la solución sea escalable, accesible y eficiente, lo que asegurao su adaptabilidad a distintos entornos y necesidades.
 
 \section{4. Alcance del proyecto}
 \label{sec:alcance}
 
-Este proyecto abarca el desarrollo e implementación de un sistema de monitoreo de calidad del aire basado en IoT. El sistema será capáz de medir (recolectar), transmitir, almacenar y mostrar datos en tiempo real, proporcionando información clave para la toma de deciciones.
+Este proyecto abarca el desarrollo e implementación de un sistema de monitoreo de calidad del aire basado en IoT. El sistema será capáz de medir, transmitir, almacenar y mostrar datos en tiempo real, proporcionando información clave para la toma de decisiones.
 
 El proyecto incluye:
 
-\textbf{Dispositivos IoT (Nodos de Sensores)}
 \begin{itemize}
-	\item Microcontrolador: ESP32-S3 (por su conectividad WiFi/BLE, bajo consumo y módulo LoRa con antena incluido).
-	\item Sensores:
-	\begin{itemize}
-		\item PM2.5/PM10: Sensor SDS011 o PMS5003 (mide partículas en suspensión).
-		\item CO2: Sensor MH-Z19B o SCD30 (mide dióxido de carbono).
-		\item VOCs: Sensor CCS811 o SGP30 (detecta compuestos orgánicos volátiles).
-		\item Temperatura y Humedad: DHT22 o BME280.
-	\end{itemize}
-
-	\item Comunicación:
-	\begin{itemize}
-		\item LoRaWAN para áreas extensas (ej: ciudades) o WiFi/MQTT para interiores.
-		\item Protocolo MQTT para enviar datos al servidor.
-		\item Módulo Lora Sx1262 (incluido en el ESP32 de Heltec).
-	\end{itemize}
-
-	\item Alimentación: Batería recargable o USB (interiores).
-\end{itemize}
-
-\textbf{Servidor y Almacenamiento de Datos}
-\begin{itemize}
-
-	\item Protocolo de recepción: MQTT (usando brokers como Mosquitto, AWS IoT Core).
+	\item Sensores para medir partículas en suspensión, dióxido de carbono, compuestos orgánicos volátiles, temperatura y humedad.
+	\item Microcontrolares ESP32 con modulo LoRa y antena para comunicación se con el servidor mediante protocolos de LoRaWAN, WiFi, MQTT y TCP/IP.
+	\item Servidor AWS IoT Core, usando brocker Mosquito y el diseño de la base de datos SQL/NoSQL con PostgreSQL.
+	\item El diseño de un aplicativo web para las visualizaciones del usuario, donde se veran los dispositivos conectados, mediciones, gráficas de históricos y alertas.
 	
-	\item Base de datos:
-	\begin{itemize}
-		\item Time-Series Database: InfluxDB (optimizada para datos temporales como lecturas de sensores).
-		\item SQL/NoSQL: PostgreSQL o MongoDB (para consultas complejas).	
-	\end{itemize}
 	
-	\item Procesamiento inicial:
-	\begin{itemize}
-		\item Validación de datos (eliminar valores atípicos).
-		\item Normalización de unidades (ej: convertir ppm de CO2 a mg/m³).
-	\end{itemize}
-
-\end{itemize}
-
-\textbf{Aplicativo Web/Móvil}
-\begin{itemize}
-	\item Frontend:
-	\begin{itemize}
-		\item Framework: React.js o Vue.js para dashboards interactivos.
-		\item Librerías de visualización: Chart.js, D3.js o Grafana integrado.
-	\end{itemize}
-	
-	\item Backend:
-	\begin{itemize}
-		\item API REST: Desarrollada en Node.js o Python (Django/Flask).
-		\item Autenticación: JWT o OAuth2 para acceso seguro.
-	\end{itemize}
-	
-	\item Características del aplicativo:
-	\begin{itemize}
-		\item Mapa en tiempo real con colores según el índice de calidad del aire.
-		\item Gráficos históricos (tendencias de PM2.5, CO2, etc.).
-		\item Alertas personalizables (notificaciones push).
-		\item Descarga de informes en PDF/CSV. (deseado)	
-	\end{itemize}		
-	
-\end{itemize}
-
-\textbf{Flujo de Datos}
-\begin{itemize}
-	\item Recolección: Los sensores capturan datos cada 1-5 minutos.
-	\item Transmisión: El ESP32 envía los datos vía MQTT/LoRaWAN al broker.
-	\item Almacenamiento: El servidor procesa y guarda los datos en InfluxDB.
-	\item Visualización: El aplicativo web consulta la API para mostrar datos en dashboards.
 \end{itemize}
 
 El presente proyecto no incluye:
@@ -265,6 +210,7 @@ El presente proyecto no incluye:
 	\item Integración con inteligencia artificial o modelos predictivos avanzados.
 	\item Implementación de una red de sensores a gran escala más allá del piloto inicial.
 	\item Certificaciones oficiales de calidad del aire, ya que el sistema servirá como referencia complementaria a mediciones gubernamentales o institucionales.
+	\item Localización geográfica que marque el estado de las zonas monitoreadas.
 \end{itemize}
 
 El alcance del proyecto está limitado a ser considerado un prototipo, enfocado en validar la viabilidad técnica y operativa. Las futuras versiones podrán incorporar mejoras basadas en los resultados de esta etapa.
@@ -275,86 +221,248 @@ El alcance del proyecto está limitado a ser considerado un prototipo, enfocado 
 Para el desarrollo del presente proyecto se supone que:
 
 \begin{itemize}
-	\item \textbf{Disponibilidad financiera:} Dado que se trata de un emprendimiento personal, los costos del proyecto serán cubiertos por el responsable del proyecto.
-	\item \textbf{Disponibilidad tecnológica:} Se cuenta con acceso a los sensores, microcontroladores y todos los componentes necesarios para la fabricación de los dispositovos IoT.
-	\item \textbf{Factibilidad técnica:} Se asume que el diseño e implementación del sistema representa un reto que es el resultado de poner en práctica de lo aprendido en la especialización en IoT de la Universidad de Buenos Aires.
-	\item \textbf{Tiempo:} El responsable debe cumplir con su planificación a ser propuesta, evitando retrasos y culminando el proyecto de manera satisfactoria.
-	\item \textbf{Infraestructura de comunicación:} Se realizarán pruebas en entornos controlados asegurando que se cumple con la cobertura de la red LoRaWAN. En el caso de entornos cerrados se verificara la transmisión estable mediante WiFi/MQTT. De esta manera se asegura que los datos sean enviados para su visualización en línea, gracias al internet.
-	\item \textbf{Consideración como prototipo:} En esta primera versión, el sistema se desarrollará como un prototipo funcional, con el objetivo de validar su desempeño y detectar oportunidades de mejora.
-	\item \textbf{Aceptación del usuario:} Se espera que empresas, ciudadanos, ONGs y gobiernos muestren interes en utilizar la plataforma, incentivando un modelo de monitoreo colaborativo de la calidad del aire.
+	\item Disponibilidad financiera: dado que se trata de un emprendimiento personal, los costos del proyecto podrán ser cubiertos por el responsable del proyecto.
+	\item Disponibilidad tecnológica: se contará con acceso a los sensores, microcontroladores y todos los componentes necesarios para la fabricación de los dispositovos IoT.
+	\item Tiempo: El responsable cumplirá con la planificación propuesta, evitará retrasos y culminará el proyecto de manera satisfactoria.
+	\item Infraestructura de comunicación: Podrán realizarse pruebas en entornos controlados pertinentes para el correcto desarrollo del proyecto.
+	\item Servidores cloud: Se contará con espacios de prueba en AWS, los dominios y servicios para utilizar el brocker Mosquito.
 
 \end{itemize}
 
 \section{6. Requerimientos}
 \label{sec:requerimientos}
 
-\begin{consigna}{red} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
-Los requerimientos deben enumerarse y de ser posible estar agrupados por afinidad, por ejemplo:
-
 \begin{enumerate}
+
 	\item Requerimientos funcionales:
-		\begin{enumerate}
-			\item El sistema debe...
-			\item Tal componente debe...
-			\item El usuario debe poder...
-		\end{enumerate}
-	\item Requerimientos de documentación:
-		\begin{enumerate}
-			\item Requerimiento 1.
-			\item Requerimiento 2 (prioridad menor)
-		\end{enumerate}
-	\item Requerimiento de testing...
-	\item Requerimientos de la interfaz...
-	\item Requerimientos interoperabilidad...
-	\item etc...
+	\begin{enumerate}
+	
+
+		\item El sistema permitirá la captura periódica de datos ambientales a través de sensores conectados a dispositivos IoT.
+		\item Los datos se transmitirán al servidor en tiempo real utilizando LoRaWAN o WiFi/MQTT según el entorno.
+		\item El sistema deberá almacenar los datos para su posterior análisis.
+		\item Se deberá ofrecer la opción de publicar los datos de manera privada o pública.
+		\item La interfaz será capaz de mostrar a los usuarios las mediciones de sus dispositivos y las zonas que tenga registrado un usuario.
+		\item Deberá generarse una alerta cuando los valores superen los umbrales definidos como peligrosos.
+	\end{enumerate}
+	
+	\item Requerimientos de infraestructura
+	\begin{enumerate}
+		\item Se deberá contar con acceso a una red WiFi estable o cobertura LoRaWAN en las zonas de instalación de los dispositivos.
+		\item El sistema requerirá un servidor (local o en la nube) con capacidad para recibir, procesar y almacenar datos provenientes de múltiples nodos.
+		\item La base de datos utilizada deberá estar optimizada para el manejo de series temporales y para la gestión estructurada de usuarios y configuraciones.
+		\item La alimentación de los dispositivos deberá realizarse mediante batería recargable o fuente USB, con posibilidad de alimentación solar para aplicaciones en exteriores.	
+	\end{enumerate}
+	
+	\item Requerimientos de documentación
+	\begin{enumerate}
+		\item Deberá documentarse el proceso de montaje del hardware, incluyendo la conexión de sensores al microcontrolador ESP32-S3 y la configuración de red.
+		\item Se deberá incluir un manual de instalación y uso de la plataforma web.
+		\item La documentación deberá contemplar las APIs utilizadas o desarrolladas para la comunicación entre dispositivos y servidor.	
+	\end{enumerate}
+
+	\item Requerimientos del entregable
+	\begin{enumerate}
+		\item El entregable consistirá en un prototipo funcional que incluya al menos dos dispositivos que realicen las mediciones ambientales, un nodo IoT operativo, una 		\item plataforma web de visualización, un sistema de almacenamiento de datos y un módulo de alertas.
+		\item El sistema deberá estar probado en un entorno controlado y documentado como prueba de concepto.
+		\item Se desarrollará la memoria final del proyecto.
+
+	\end{enumerate}
+	
+	\item Requerimientos de la interfaz
+	\begin{enumerate}
+		\item La plataforma deberá contar con una interfaz web responsiva para el monitoreo.
+		\item La interfaz permitirá visualizar datos en tiempo real, acceder a históricos, gestionar dispositivos y configurar alertas.
+		\item Los indicadores de calidad del aire deberán representarse mediante códigos de colores intuitivos y comprensibles.
+		\item El sistema ofrecerá una interfaz de visualización con lecturas de datos ambientales de las zonas definidas como públicas. Se limitará la visualización al estado de las zonas sin tener acceso a los dispositivos vinculados y datos históricos.
+
+	\end{enumerate}
+
+	\item Requerimientos funcionales del sistema para el rol “Usuario”
+	\begin{enumerate}
+		\item El usuario deberá poder registrarse y asociar dispositivos a su cuenta personal.
+		\item El usuario gestionará sus dispositivos pudiendo agregar, eliminar, editar y asignar la ubicación en zonas definidas.
+		\item Tendrá acceso a la visualización en tiempo real de los datos capturados por sus sensores.
+		\item Podrá decidir si desea compartir sus datos de forma pública o mantenerlos en modo privado.
+		\item Recibirá alertas personalizadas cuando los valores medidos superen los umbrales definidos.
+
+	\end{enumerate}
+
+	\item Requerimientos funcionales del sistema para el rol “Administrador”
+	\begin{enumerate}
+		\item El administrador deberá tener acceso a la gestión de usuarios, dispositivos y configuraciones generales del sistema.
+		\item Tendrá visibilidad completa sobre las métricas generadas por todos los nodos activos.
+		\item Deberá poder acceder a registros (logs) del sistema y supervisar el estado de funcionamiento de cada dispositivo.
+
+	\end{enumerate}
+
+	\item Requerimientos funcionales del sistema para la vista pública
+	\begin{enumerate}
+		\item La persona que quiera tener acceso a la vista pública deberá llenar un formulario donde se exprese su intención de acceder a esta información.
+		\item La interfaz pública tendrá a disposición el estado en tiempo real de las mediciones ambientales de las zonas públicas.
+
+	\end{enumerate}
+
+	\item Requerimientos de seguridad
+	\begin{enumerate}
+		\item El sistema gestionará las credenciales para el ingreso de los usuarios.
+		\item Se contará con métodos para recuperación de contraseñas y verificación de usuarios.
+		\item La información asociada a los usuarios y a dispositivos configurados como privados deberá mantenerse protegida y no podrá hacerse pública sin consentimiento expreso.
+
+	\end{enumerate}
+
 \end{enumerate}
-
-Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
-
-Indicar claramente cuál es la prioridad entre los distintos requerimientos y si hay requerimientos opcionales. 
-
-\textbf{¡¡¡No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!}
-
-Y al escribirlos seguir las siguientes reglas:
-\begin{itemize}
-	\item Ser breve y conciso (nadie lee cosas largas). 
-	\item Ser específico: no dejar lugar a confusiones.
-	\item Expresar los requerimientos en términos que sean cuantificables y medibles.
-\end{itemize}
-
-\end{consigna} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
 
 \section{7. Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
-\begin{consigna}{red}
-Descripción: en esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
-
-Se debe indicar explícitamente el criterio para calcular los \textit{story points} de cada historia.
-
-El formato propuesto es: 
 \begin{enumerate}
-\item ``Como [rol] quiero [tal cosa] para [tal otra cosa]."
+\item
+Como usuario del sistema, quiero registrar un dispositivo IoT en mi cuenta para poder acceder a sus datos ambientales.
 
-\textit{Story points}: 8 (complejidad: 3, dificultad: 2, incertidumbre: 3)
+Complejidad: 3
+Dificultad: 2
+Incertidumbre: 1
+Suma: 6 → Story Points: 8
+
+Criterios de aceptación:
+\begin{itemize}
+	\item El dispositivo queda vinculado a la cuenta del usuario al ingresar su ID único.
+	\item El dispositivo aparece en el panel de la cuenta una vez registrado.
+	\item El backend guarda la asociación en la base de datos y la valida en cada consulta.
+\end{itemize}
+
+\item
+Como usuario del sistema, quiero poder ver todos los dispositivos registrados para monitorear su estado general.
+
+Complejidad: 3
+Dificultad: 3
+Incertidumbre: 3
+Suma: 9 → Story Points: 13
+
+Criterios de aceptación:
+\begin{itemize}
+	\item Se lista el total de dispositivos activos/inactivos.
+	\item El estado de conexión de cada dispositivo es visible mediante un ícono claro.
+	\item Los dispositivos se consultan mediante una API segura y autenticada.
+\end{itemize}
+
+
+\item Como usuario, quiero visualizar los datos en tiempo real de mis sensores para conocer el estado del ambiente.
+
+Complejidad: 3
+Dificultad: 3
+Incertidumbre: 3
+Suma: 9 → Story Points: 13
+
+Criterios de aceptación:
+\begin{itemize}
+	\item Los datos se actualizan en intervalos definidos.
+	\item Los valores se presentan en tarjetas con colores según el nivel de calidad del aire.
+	\item La plataforma consulta la API de datos en tiempo real.
+\end{itemize}
+
+\item Como usuario, quiero acceder al historial de datos recolectados para analizar la evolución de la calidad del aire.
+
+Complejidad: 4
+Dificultad: 3
+Incertidumbre: 3
+Suma: 10 → Story Points: 13
+
+Criterios de aceptación:
+\begin{itemize}
+	\item Se puede seleccionar un rango de fechas y consultar datos históricos.
+	\item Los datos se grafican con líneas de tendencia y filtros por parámetro.
+	\item La base de datos devuelve los datos en bloques optimizados para series temporales.
+\end{itemize}
+
+\item Como usuario, quiero configurar umbrales para cada sensor para recibir alertas ante niveles peligrosos.
+
+Complejidad: 3
+Dificultad: 2
+Incertidumbre: 3
+Suma: 8 → Story Points: 8
+
+Criterios de aceptación:
+
+\begin{itemize}
+	\item Se pueden definir umbrales distintos para cada parámetro.
+	\item El usuario recibe un mensaje claro en la interfaz si se supera un umbral.
+	\item Las reglas se almacenan por usuario y se validan en tiempo real.
+\end{itemize}
+
+\item Como usuario, quiero recibir una notificación en pantalla si se detecta contaminación peligrosa.
+
+Complejidad: 2
+Dificultad: 2
+Incertidumbre: 1
+Suma: 5 → Story Points: 5
+
+Criterios de aceptación:
+
+\begin{itemize}
+	\item El sistema envía automáticamente una notificación si se supera un umbral.
+	\item El mensaje contiene el parámetro, el valor registrado y la hora.
+	\item El envío se realiza mediante un alert.
+
+\end{itemize}
+
+\item Como usuario, quiero poder elegir si mis datos son públicos o privados para decidir con quién los comparto.
+
+Complejidad: 2
+Dificultad: 2
+Incertidumbre: 1
+Suma: 5 → Story Points: 5
+
+Criterios de aceptación:
+\begin{itemize}
+	\item El usuario puede alternar entre visibilidad pública y privada desde la configuración del dispositivo.
+	\item Un ícono o leyenda indica claramente el estado actual.
+	\item La API restringe el acceso a los datos privados a usuarios autenticados.
+
+\end{itemize}
+
+\item Como visitante del sitio web, quiero poder visualizar los datos públicos de calidad del aire organizados por zonas, para conocer el estado ambiental.
+
+Complejidad: 3
+Dificultad: 3
+Incertidumbre: 3
+Suma: 9 → Story Points: 13
+
+Criterios de aceptación:
+
+\begin{itemize}
+	\item El sistema permite acceso libre a una sección pública donde se muestran los datos de la calidad del aire correspondientes a una zona con visibilidad pública.
+	\item Los datos se organizan por zona, haciendo referencia de su dirección y se muestra la última lectura de cada medición ambiental.
+	\item No requiere autenticación y los datos se actualizan con una frecuencia configurable.
+
+\end{itemize}
+
+
 \end{enumerate}
-\end{consigna}
+
 
 \section{8. Entregables principales del proyecto}
 \label{sec:entregables}
 
-\begin{consigna}{red}
-Los entregables del proyecto son (ejemplo):
-
 \begin{itemize}
-	\item Manual de usuario.
-	\item Diagrama de circuitos esquemáticos.
-	\item Código fuente del firmware.
-	\item Diagrama de instalación.
-	\item Memoria del trabajo final.
-	\item etc...
+\item Aplicativo web de visualización
+
+\item Código fuente
+
+\item Base de datos operativa
+
+\item Manual de usuario
+
+\item Manual de instalación
+
+\item Esquemático de conexión de sensores
+
+\item Diagrama de bloques del sistema
+
+\item Memoria final del trabajo
+
 \end{itemize}
-\end{consigna}
 
 \section{9. Desglose del trabajo en tareas}
 \label{sec:wbs}
