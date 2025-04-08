@@ -32,16 +32,13 @@
 \fechaFINALPlan{22 de abril de 2025} 	%Fecha de final de cursada de GdP
 \fechaFINALTrabajo{octubre de 2025}	%Fecha de defensa pública del trabajo final
 
-\usepackage[spanish]{babel}
-\addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
-
-
 
 \begin{document}
 
 \maketitle
 \thispagestyle{empty}
 \pagebreak
+
 
 \thispagestyle{empty}
 {\setlength{\parskip}{0pt}
@@ -510,7 +507,7 @@ Si el resultado de la suma es distinto a un número de la serie de Fibonacci, se
 	Criterios de aceptación:
 	\begin{itemize}
 		\item El visitante tendrá acceso a las mediciones de los dispositivos públicos.
-		\item El visitante llenara un formulario para para solicitar datos históricos.
+		\item El visitante en caso de requerir históricos podrá hacer su solicitud llenando un formulario.
 		\item Los datos se actualizan con una frecuencia ya definida por defecto.
 	\end{itemize}
 \end{enumerate}
@@ -533,6 +530,7 @@ Los entregables del proyecto son:
 \item Esquemático de conexión de sensores.
 \item Diagrama de bloques del sistema.
 \item Memoria final del trabajo.
+
 \end{itemize}
 
 \section{9. Desglose del trabajo en tareas}
@@ -540,103 +538,250 @@ Los entregables del proyecto son:
 
 A continuación, se presenta el desglose de tareas estimadas para el desarrollo del proyecto, organizadas por historias de usuario y agrupadas según las funcionalidades del sistema:
 
-\begin{enumerate}
-	\item Planificación (100 h)
-	\begin{enumerate}
-		\item Estudiar sobre las mediciones para el monitoreo de la calidad del aire. (20 h)
-		\item Investigar y seleccionar las tecnologías IoT a utilizarse en el proyecto. (20 h)
-		\item Plantear el plan del proyecto. (40 h)
-	\end{enumerate}
 
+\begin{enumerate}
     \item Ingreso y gestión de cuentas (70 h)
     \begin{enumerate}
-        \item Diseñar estructura de base de datos para usuarios y roles. (6 h)
-        \item Desarrollar del backend de la API de login y autenticación. (8 h)
-        \item Implementar la autenticación en el frontend. (8 h)
-        \item Desarrollar formulario de inicio de sesión en frontend. (8 h)
-        \item Diseñar vista de perfil de usuario con edición básica. (8 h)
-        \item Desarrollar la lógica y datos del backend para gestionar supervisores. (8 h)
-        \item Crear panel administrativo para gestionar supervisores. (8 h)
-        \item Validar el proceso de ingreso y autenticación de usuarios al sistema. (8 h)
-        \item Comprobar el control y la asignación de roles. (8 h)
+        \item Diseñar estructura de base de datos para usuarios y roles (6 h)
+        \item Desarrollar del backend de la API de login y autenticación (8 h)
+        \item Implementar la autenticación en el frontend (8 h)
+        \item Desarrollar formulario de inicio de sesión en frontend (8 h)
+        \item Diseñar vista de perfil de usuario con edición básica (8 h)
+        \item Desarrollar la lógica y datos del backend para gestionar supervisores (8 h)
+        \item Crear panel administrativo para gestionar supervisores (8 h)
+        \item Validar el proceso de ingreso y autenticación de usuarios al sistema (8 h)
+        \item Comprobar el control y la asignación de roles (8 h)
     \end{enumerate}
 
     \item Gestión de zonas (38 h)
     \begin{enumerate}
-        \item Diseñar modelo de datos para zonas en la base de datos. (6 h)
-        \item Desarrollar API para CRUD de zonas. (10 h)
-        \item Diseñar vista para registrar y listar zonas desde el frontend. (10 h)
-        \item Validar la asignación de zonas a usuarios en backend. (6 h)
-        \item Realizar pruebas de gestión de zonas. (6 h)
+        \item Diseñar modelo de datos para zonas en la base de datos (6 h)
+        \item Desarrollar API para CRUD de zonas (10 h)
+        \item Diseñar vista para registrar y listar zonas desde el frontend (10 h)
+        \item Validar la asignación de zonas a usuarios en backend (6 h)
+        \item Realizar pruebas de gestión de zonas (6 h)
     \end{enumerate}
 
     \item Gestión de dispositivos IoT (44 h)
     \begin{enumerate}
-        \item Diseñar esquema de relación entre dispositivos y zonas. (5 h)
-        \item Crear formulario para registrar dispositivo desde el frontend. (7 h)
-        \item Desarrollar API para vincular dispositivos al usuario/zona. (8 h)
-        \item Mostrar listado de dispositivos vinculados y su estado. (8 h)
-        \item Testear recepción de datos por MQTT desde dispositivo. (8 h)
-        \item Realizar pruebas funcionales de gestión de dispositivos. (8 h)
+        \item Diseñar esquema de relación entre dispositivos y zonas (5 h)
+        \item Crear formulario para registrar dispositivo desde el frontend (7 h)
+        \item Desarrollar API para vincular dispositivos al usuario/zona (8 h)
+        \item Mostrar listado de dispositivos vinculados y su estado (8 h)
+        \item Testear recepción de datos por MQTT desde dispositivo (8 h)
+        \item Realizar pruebas funcionales de gestión de dispositivos (8 h)
     \end{enumerate}
 
     \item Monitoreo de calidad del aire (50 h)
     \begin{enumerate}
-        \item Desarrollar lógica para almacenar datos sensados. (8 h)
-        \item Crear API para consulta de datos en tiempo real e históricos. (8 h)
-        \item Implementar tarjetas en frontend con datos de sensores. (10 h)
-        \item Diseñar vista de gráficos históricos con filtros por fecha/zona. (12 h)
-        \item Validar rendimiento y consumo de datos desde el frontend. (6 h)
-        \item Realizar pruebas funcionales de las vistas de monitoreo. (6 h)
+        \item Desarrollar lógica para almacenar datos sensados (8 h)
+        \item Crear API para consulta de datos en tiempo real e históricos (8 h)
+        \item Implementar tarjetas en frontend con datos de sensores (10 h)
+        \item Diseñar vista de gráficos históricos con filtros por fecha/zona (12 h)
+        \item Validar rendimiento y consumo de datos desde el frontend (6 h)
+        \item Realizar pruebas funcionales de las vistas de monitoreo (6 h)
     \end{enumerate}
 
     \item Alertas y configuración de umbrales (32 h)
     \begin{enumerate}
-        \item Agregar interfaz de configuración de umbrales por parámetro. (8 h)
-        \item Programar backend para validación y activación de alertas. (8 h)
-        \item Diseñar componente de notificación visual ante alertas. (8 h)
-        \item Testear reglas con datos simulados en backend. (8 h)
+        \item Agregar interfaz de configuración de umbrales por parámetro (8 h)
+        \item Programar backend para validación y activación de alertas (8 h)
+        \item Diseñar componente de notificación visual ante alertas (8 h)
+        \item Testear reglas con datos simulados en backend (8 h)
     \end{enumerate}
 
     \item Acceso y visibilidad de datos públicos (30 h)
     \begin{enumerate}
-        \item Diseñar API pública para consultar datos de zonas visibles. (6 h)
-        \item Crear vista pública con tarjetas de calidad del aire por zona. (10 h)
-        \item Implementar lógica para filtrar solo datos públicos. (6 h)
-        \item Agregar acceso como invitado y formulario básico. (4 h)
-        \item Validar acceso y permisos desde frontend. (4 h)
+        \item Diseñar API pública para consultar datos de zonas visibles (6 h)
+        \item Crear vista pública con tarjetas de calidad del aire por zona (10 h)
+        \item Implementar lógica para filtrar solo datos públicos (6 h)
+        \item Agregar acceso como invitado y formulario básico (4 h)
+        \item Validar acceso y permisos desde frontend (4 h)
     \end{enumerate}
 
-    \item Despliegue y documentación técnica. (48 h)
+    \item Despliegue y documentación técnica (48 h)
     \begin{enumerate}
-        \item Configuración de la base de datos y definición de modelos. (8 h)
-        \item Deploy de backend y frontend en plataforma gratuita. (8 h)
-        \item Documentación técnica de la API. (8 h)
-        \item Redacción del manual de usuario. (8 h)
-        \item Manual de instalación del sistema. (8 h)
-        \item Informe de pruebas del prototipo en entorno real. (8 h)
+        \item Configuración de la base de datos y definición de modelos (8 h)
+        \item Deploy de backend y frontend en plataforma gratuita (8 h)
+        \item Documentación técnica de la API (8 h)
+        \item Redacción del manual de usuario (8 h)
+        \item Manual de instalación del sistema (8 h)
+        \item Informe de pruebas del prototipo en entorno real (8 h)
     \end{enumerate}
 
-    \item Documentación y presentación final. (195 h)
+    \item Documentación y presentación final (195 h)
     \begin{enumerate}
-        \item Elaborar el informe de avance. (60 h)
-        \item Desarrollar la memoria final con anexos y correcciones. (85 h)
-        \item Armar la presentación final. (30 h)
-        \item Ensayar y preparar la defensa. (20 h)
+        \item Elaborar el informe de avance (60 h)
+        \item Desarrollar la memoria final con anexos y correcciones (85 h)
+        \item Armar la presentación final (30 h)
+        \item Ensayar y preparar la defensa (20 h)
     \end{enumerate}
 \end{enumerate}
 
-Cantidad total de horas: 607.
+\vspace{10pt}
+\noindent \textbf{Cantidad total de horas: 507 h}
+
+
+
+\subsection*{Etapa 1: ingreso y gestión de cuentas}
+\begin{tabular}{|p{2.5cm}|p{7.5cm}|c|c|}
+\hline
+\textbf{Historias de Usuario} & \textbf{Tarea técnica} & \textbf{Duración (h)} & \textbf{Prioridad} \\
+\hline
+HU1 & Diseñar estructura de base de datos para usuarios y roles & 6 & Alta \\
+\hline
+HU1 & Desarrollar del \textit{backend} de la API de login y autenticación & 8 & Alta \\
+\hline
+HU1 & Implementar de la autenticación en el \textit{frontend} & 8 & Alta \\
+\hline
+HU1 & Desarrollar formulario de inicio de sesión en \textit{frontend} & 8 & Media \\
+\hline
+HU2 & Diseñar vista de perfil de usuario con edición básica & 8 & Media \\
+\hline
+HU1 & Desarrollar la lógica y datos del \textit{backend} para gestionar supervisores & 8 & Alta \\
+\hline
+HU1 & Crear panel administrativo para gestionar supervisores & 8 & Alta \\
+\hline
+HU2 & Validar el proceso de ingreso y autenticación de usuarios al sistema & 8 & Alta \\
+\hline
+HU2 & Comprobar el control y la asignación de roles & 8 & Alta \\
+\hline
+\end{tabular}
+
+\subsection*{Etapa 2: gestión de zonas}
+\begin{tabular}{|p{2.5cm}|p{7.5cm}|c|c|}
+\hline
+\textbf{Historias de Usuario} & \textbf{Tarea técnica} & \textbf{Duración (h)} & \textbf{Prioridad} \\
+\hline
+HU3 & Diseñar modelo de datos para zonas en la base de datos & 6 & Media \\
+\hline
+HU3 & Desarrollar API para CRUD de zonas (crear, ver, editar, eliminar) & 10 & Alta \\
+\hline
+HU4 & Diseñar vista para registrar y listar zonas desde el \textit{frontend} & 10 & Alta \\
+\hline
+HU4 & Validar la asignación de zonas a usuarios en \textit{backend} & 6 & Media \\
+\hline
+HU4 & Realizar pruebas de gestión de zonas & 6 & Media \\
+\hline
+\end{tabular}
+
+\subsection*{Etapa 3: gestión de dispositivos IoT}
+\begin{tabular}{|p{2.5cm}|p{7.5cm}|c|c|}
+\hline
+\textbf{Historias de Usuario} & \textbf{Tarea técnica} & \textbf{Duración (h)} & \textbf{Prioridad} \\
+\hline
+HU5 & Diseñar esquema de relación entre dispositivos y zonas & 5 & Alta \\
+\hline
+HU5 & Crear formulario para registrar dispositivo desde el \textit{frontend} & 7 & Media \\
+\hline
+HU5 & Desarrollar API para vincular dispositivos al usuario/zona & 8 & Alta \\
+\hline
+HU6 & Mostrar listado de dispositivos vinculados y su estado & 8 & Alta \\
+\hline
+HU6 & Testear recepción de datos por MQTT desde dispositivo & 8 & Alta \\
+\hline
+HU6 & Realizar pruebas funcionales de gestión de dispositivos & 8 & Media \\
+\hline
+\end{tabular}
+
+\subsection*{Etapa 4: monitoreo de calidad del aire}
+\begin{tabular}{|p{2.5cm}|p{7.5cm}|c|c|}
+\hline
+\textbf{Historias de Usuario} & \textbf{Tarea técnica} & \textbf{Duración (h)} & \textbf{Prioridad} \\
+\hline
+HU7 & Desarrollar lógica para almacenar datos sensados & 8 & Alta \\
+\hline
+HU7 & Crear API para consulta de datos en tiempo real e históricos & 8 & Alta \\
+\hline
+HU8 & Implementar tarjetas en \textit{frontend} con datos de sensores & 10 & Alta \\
+\hline
+HU8 & Diseñar vista de gráficos históricos con filtros por fecha/zona & 12 & Alta \\
+\hline
+HU7 & Validar rendimiento y consumo de datos desde el \textit{frontend} & 6 & Media \\
+\hline
+HU8 & Realizar pruebas funcionales de las vistas de monitoreo & 6 & Media \\
+\hline
+\end{tabular}
+
+\subsection*{Etapa 5: alertas y configuración de umbrales}
+\begin{tabular}{|p{2.5cm}|p{7.5cm}|c|c|}
+\hline
+\textbf{Historias de Usuario} & \textbf{Tarea técnica} & \textbf{Duración (h)} & \textbf{Prioridad} \\
+\hline
+HU9 & Agregar interfaz de configuración de umbrales por parámetro & 8 & Media \\
+\hline
+HU9 & Programar \textit{backend} para validación y activación de alertas & 8 & Alta \\
+\hline
+HU10 & Diseñar componente de notificación visual ante alertas & 8 & Media \\
+\hline
+HU10 & Testear reglas con datos simulados en \textit{backend} & 8 & Alta \\
+\hline
+\end{tabular}
+
+\subsection*{Etapa 6: acceso y visibilidad de datos públicos}
+\begin{tabular}{|p{2.5cm}|p{7.5cm}|c|c|}
+\hline
+\textbf{Historias de Usuario} & \textbf{Tarea técnica} & \textbf{Duración (h)} & \textbf{Prioridad} \\
+\hline
+HU11 & Diseñar API pública para consultar datos de zonas visibles & 6 & Media \\
+\hline
+HU12 & Crear vista pública con tarjetas de calidad del aire por zona & 10 & Alta \\
+\hline
+HU12 & Implementar lógica para filtrar solo datos públicos & 6 & Alta \\
+\hline
+HU13 & Agregar acceso como invitado y formulario básico & 4 & Media \\
+\hline
+HU13 & Validar acceso y permisos desde \textit{frontend} & 4 & Media \\
+\hline
+\end{tabular}
+
+\subsection*{Etapa 7: despliegue y documentación técnica}
+\begin{tabular}{|p{2.5cm}|p{7.5cm}|c|c|}
+\hline
+\textbf{Historias de Usuario} & \textbf{Tarea técnica} & \textbf{Duración (h)} & \textbf{Prioridad} \\
+\hline
+HU0 & Configuración de la base de datos y definición de modelos & 8 & Alta \\
+\hline
+HU0 & Deploy de \textit{backend} y \textit{frontend} en plataforma gratuita (ej. render.com) & 8 & Alta \\
+\hline
+HU0 & Documentación técnica de la API (OpenAPI o Markdown) & 8 & Alta \\
+\hline
+HU0 & Redacción del manual de usuario & 8 & Media \\
+\hline
+HU0 & Manual de instalación del sistema (entorno, dependencias, pasos) & 8 & Media \\
+\hline
+HU0 & Informe de pruebas del prototipo en entorno real & 8 & Alta \\
+\hline
+\end{tabular}
+
+\subsection*{Etapa 8: documentación y presentación}
+\begin{tabular}{|p{2.5cm}|p{7.5cm}|c|c|}
+\hline
+\textbf{Historias de Usuario} & \textbf{Tarea técnica} & \textbf{Duración (h)} & \textbf{Prioridad} \\
+\hline
+HU0 & Elaborar el informe de avance & 60 & Alta \\
+\hline
+HU0 & Desarollar la memoria final con anexos y correcciones & 85 & Alta \\
+\hline
+HU0 & Armar la presentación final & 30 & Media \\
+\hline
+HU0 & Ensayar y preparar la defensa & 20 & Media \\
+\hline
+
+\end{tabular}
+
+\vspace{10pt}
+\textbf{Cantidad total de horas: 507}
 
 
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
 
-En la figura 2 se visualiza el diagrama \textit{Activity On Node} del proyecto:
+En la figura 2 se visualiza el diagrama \textit{Activity On Node} del proyecto. Con lineas más gruesas se indica el camino cítico. El tiempo de cada tarea se mide en horas.
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=0.9\textwidth]{./Figuras/fig_2-diagrama-AON.jpeg}
+\includegraphics[width=1\textwidth]{./Figuras/fig_2-diagrama-AON.png}
 \caption{Diagrama de \textit{Activity on Node}.}
 \label{fig:AoN}
 \end{figure}
@@ -644,7 +789,7 @@ En la figura 2 se visualiza el diagrama \textit{Activity On Node} del proyecto:
 \begin{itemize}
     \item Las tareas están agrupadas en etapas según el desglose del trabajo en tareas.
     \item Las duraciones $t$ están expresadas en horas.
-    \item Las flechas rojas indican caminos críticos parciales entre tareas dependientes.
+    \item Las líneas gruesas indican caminos críticos parciales entre tareas dependientes.
 \end{itemize}
 
 
@@ -655,17 +800,72 @@ En la figura 3 se muestra el diagrama de Gantt general del proyecto.
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=0.62\textwidth]{./Figuras/fig_3-Gantt.png}
+\includegraphics[width=0.7\textwidth]{./Figuras/fig_3-1-Gantt.png}
 \caption{Diagrama de Gantt del proyecto.}
-\label{fig:Gantt}
+\label{fig:AoN}
 \end{figure}
+
+En la figura 4, figura 5, figura 6, figura 7, figura 8 y figura 9 se muestran los diagramas de Gantt respectivos a cada etapa del proyecto.
+
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=0.6\textwidth]{./Figuras/fig_4-1-Gantt.png}
+\caption{Diagrama de Gantt de la etapa de planificación.}
+\label{fig:AoN}
+\end{figure}
+
+
+
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=0.6\textwidth]{./Figuras/fig_5-1-Gantt.jpeg}
+\caption{Diagrama de Gantt de la etapa de ingreso y gestión de cuentas.}
+\label{fig:AoN}
+\end{figure}
+
+
+
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=0.8\textwidth]{./Figuras/fig_6-1-Gantt.jpeg}
+\caption{Diagrama de Gantt de las etapas de gestión de zonas y gestión de dispositivos IoT.}
+\label{fig:AoN}
+\end{figure}
+
+
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=0.8\textwidth]{./Figuras/fig_7-1-Gantt.jpeg}
+\caption{Diagrama de Gantt de las etapas de monitoreo de calidad del aire y alertas y configuración de umbrales.}
+\label{fig:AoN}
+\end{figure}
+
+
+
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=0.8\textwidth]{./Figuras/fig_8-1-Gantt.jpeg}
+\caption{Diagrama de Gantt de las etapas de acceso y visibilidad de datos públicos y Despliegue y documentación técnica.}
+\label{fig:AoN}
+\end{figure}
+
+
+
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=0.6\textwidth]{./Figuras/fig_9-1-Gantt.jpeg}
+\caption{Diagrama de Gantt de la etapa de documentación y presentación.}
+\label{fig:AoN}
+\end{figure}
+
+
 
 \section{12. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
-Los valores de los costos están expresados en dólares estadounidenses (USD). Al momento de elaborar el presente documento, 4 de abril del 2025, su tasa de conversión a pesos argentinos es de 1319/1 USD (referencia dólar MEP).
+Los valores de los costos están expresados en dólares estadounidenses (USD). Al momento de elaborar el plan (04/04/2025) su tasa de conversión a pesos argentinos es de 1319/1 USD (referencia dólar MEP).
 
-En la tabla 1, se visualiza un cuadro con el presupuesto del proyecto. Todas las unidades se encuentran expresadas en USD.
+A continuación, se visualiza un cuadro con el presupuesto del proyecto. Todas las unidades se encuentran expresadas en pesos argentinos.
 \begin{table}[htpb]
 \centering
 \begin{tabularx}{\linewidth}{@{}|X|c|r|r|@{}}
@@ -683,7 +883,7 @@ Sensor CCS811 CO2 & 3 & \$12,88 & \$38,64 \\ \hline
 WisGate Edge Lite 2 RAK7268V2/RAK7268CV2 & 1 & \$139,00 & \$139,00 \\ \hline
 Mini UPS con salida 12VDC & 1 & \$19,00 & \$19,00 \\ \hline
 ESP32 LoRa V3 + batería 1100 mAh + accesorios & 4 & \$31,50 & \$126,00 \\ \hline
-Horas de trabajo & 610 & \$10,00 & \$6.100,00 \\ \hline
+Mano de obra & 610 & \$10,00 & \$6.100,00 \\ \hline
 \multicolumn{3}{|c|}{\textbf{SUBTOTAL}} & \textbf{\$6.596,64} \\ \hline
 
 \rowcolor[HTML]{C0C0C0} 
