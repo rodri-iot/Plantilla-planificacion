@@ -469,7 +469,7 @@ Si el resultado de la suma es distinto a un número de la serie de Fibonacci, se
 	\begin{itemize}
 		\item El sistema envía automáticamente una notificación si se supera un umbral.
 		\item El mensaje contiene el parámetro, el valor registrado y la hora.
-		\item El envío se realiza mediante un alerta.
+		\item El envío se realiza mediante una alerta.
 	\end{itemize}	
 	
 	\item Como administrador, quiero poder elegir si los datos medidos con los dispositivos registrados son públicos o privados.
@@ -500,7 +500,7 @@ Si el resultado de la suma es distinto a un número de la serie de Fibonacci, se
 		\item El \textit{backend} restringirá el acceso a los datos privados.
 	\end{itemize}
 
-	\item Como visitante del sitio web, quiero poder visualizar los datos públicos de calidad del aire organizados por zonas, para conocer el estado ambiental.
+	\item Como visitante del sitio web, quiero poder visualizar los datos públicos de calidad del aire organizados por zonas para conocer el estado ambiental.
 
 	Complejidad: 5
 	Dificultad: 5
@@ -538,24 +538,24 @@ Los entregables del proyecto son:
 \section{9. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
-A continuación, se presenta el desglose de tareas estimadas para el desarrollo del proyecto, organizadas por historias de usuario y agrupadas según las funcionalidades del sistema:
+A continuación, se presenta el desglose de tareas estimadas para el desarrollo del proyecto:
 
 \begin{enumerate}
 	\item Planificación (100 h)
 	\begin{enumerate}
 		\item Estudiar sobre las mediciones para el monitoreo de la calidad del aire. (20 h)
 		\item Investigar y seleccionar las tecnologías IoT a utilizarse en el proyecto. (20 h)
-		\item Plantear el plan del proyecto. (40 h)
+		\item Plantear el plan del proyecto. (60 h)
 	\end{enumerate}
 
     \item Ingreso y gestión de cuentas (70 h)
     \begin{enumerate}
         \item Diseñar estructura de base de datos para usuarios y roles. (6 h)
-        \item Desarrollar del backend de la API de login y autenticación. (8 h)
-        \item Implementar la autenticación en el frontend. (8 h)
-        \item Desarrollar formulario de inicio de sesión en frontend. (8 h)
+        \item Desarrollar el \textit{backend} de la API de \textit{login} y autenticación. (8 h)
+        \item Implementar la autenticación en el \textit{frontend}. (8 h)
+        \item Desarrollar formulario de inicio de sesión en \textit{frontend}. (8 h)
         \item Diseñar vista de perfil de usuario con edición básica. (8 h)
-        \item Desarrollar la lógica y datos del backend para gestionar supervisores. (8 h)
+        \item Desarrollar la lógica y datos del \textit{backend} para gestionar supervisores. (8 h)
         \item Crear panel administrativo para gestionar supervisores. (8 h)
         \item Validar el proceso de ingreso y autenticación de usuarios al sistema. (8 h)
         \item Comprobar el control y la asignación de roles. (8 h)
@@ -565,15 +565,15 @@ A continuación, se presenta el desglose de tareas estimadas para el desarrollo 
     \begin{enumerate}
         \item Diseñar modelo de datos para zonas en la base de datos. (6 h)
         \item Desarrollar API para CRUD de zonas. (10 h)
-        \item Diseñar vista para registrar y listar zonas desde el frontend. (10 h)
-        \item Validar la asignación de zonas a usuarios en backend. (6 h)
+        \item Diseñar vista para registrar y listar zonas desde el \textit{frontend}. (10 h)
+        \item Validar la asignación de zonas a usuarios en \textit{backend}. (6 h)
         \item Realizar pruebas de gestión de zonas. (6 h)
     \end{enumerate}
 
     \item Gestión de dispositivos IoT (44 h)
     \begin{enumerate}
         \item Diseñar esquema de relación entre dispositivos y zonas. (5 h)
-        \item Crear formulario para registrar dispositivo desde el frontend. (7 h)
+        \item Crear formulario para registrar dispositivo desde el \textit{frontend}. (7 h)
         \item Desarrollar API para vincular dispositivos al usuario/zona. (8 h)
         \item Mostrar listado de dispositivos vinculados y su estado. (8 h)
         \item Testear recepción de datos por MQTT desde dispositivo. (8 h)
@@ -584,18 +584,18 @@ A continuación, se presenta el desglose de tareas estimadas para el desarrollo 
     \begin{enumerate}
         \item Desarrollar lógica para almacenar datos sensados. (8 h)
         \item Crear API para consulta de datos en tiempo real e históricos. (8 h)
-        \item Implementar tarjetas en frontend con datos de sensores. (10 h)
+        \item Implementar tarjetas en \textit{frontend} con datos de sensores. (10 h)
         \item Diseñar vista de gráficos históricos con filtros por fecha/zona. (12 h)
-        \item Validar rendimiento y consumo de datos desde el frontend. (6 h)
+        \item Validar rendimiento y consumo de datos desde el \textit{frontend}. (6 h)
         \item Realizar pruebas funcionales de las vistas de monitoreo. (6 h)
     \end{enumerate}
 
     \item Alertas y configuración de umbrales (32 h)
     \begin{enumerate}
         \item Agregar interfaz de configuración de umbrales por parámetro. (8 h)
-        \item Programar backend para validación y activación de alertas. (8 h)
+        \item Programar \textit{backend} para validación y activación de alertas. (8 h)
         \item Diseñar componente de notificación visual ante alertas. (8 h)
-        \item Testear reglas con datos simulados en backend. (8 h)
+        \item Testear reglas con datos simulados en \textit{backend}. (8 h)
     \end{enumerate}
 
     \item Acceso y visibilidad de datos públicos (30 h)
@@ -604,13 +604,13 @@ A continuación, se presenta el desglose de tareas estimadas para el desarrollo 
         \item Crear vista pública con tarjetas de calidad del aire por zona. (10 h)
         \item Implementar lógica para filtrar solo datos públicos. (6 h)
         \item Agregar acceso como invitado y formulario básico. (4 h)
-        \item Validar acceso y permisos desde frontend. (4 h)
+        \item Validar acceso y permisos desde \textit{frontend}. (4 h)
     \end{enumerate}
 
     \item Despliegue y documentación técnica. (48 h)
     \begin{enumerate}
         \item Configuración de la base de datos y definición de modelos. (8 h)
-        \item Deploy de backend y frontend en plataforma gratuita. (8 h)
+        \item \textit{Deploy} de \textit{backend} y \textit{frontend} en plataforma gratuita. (8 h)
         \item Documentación técnica de la API. (8 h)
         \item Redacción del manual de usuario. (8 h)
         \item Manual de instalación del sistema. (8 h)
@@ -636,7 +636,7 @@ En la figura 2 se visualiza el diagrama \textit{Activity On Node} del proyecto:
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=0.9\textwidth]{./Figuras/fig_2-diagrama-AON.jpeg}
+\includegraphics[width=0.7\textwidth]{./Figuras/fig_2-diagrama-AON.jpeg}
 \caption{Diagrama de \textit{Activity on Node}.}
 \label{fig:AoN}
 \end{figure}
@@ -647,7 +647,7 @@ En la figura 2 se visualiza el diagrama \textit{Activity On Node} del proyecto:
     \item Las flechas rojas indican caminos críticos parciales entre tareas dependientes.
 \end{itemize}
 
-
+\begin{landscape}
 \section{11. Diagrama de Gantt}
 \label{sec:gantt}
 
@@ -655,10 +655,12 @@ En la figura 3 se muestra el diagrama de Gantt general del proyecto.
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=0.62\textwidth]{./Figuras/fig_3-Gantt.png}
+\includegraphics[width=1.2\textwidth]{./Figuras/fig_3-Gantt.jpeg}
 \caption{Diagrama de Gantt del proyecto.}
 \label{fig:Gantt}
 \end{figure}
+
+\end{landscape}
 
 \section{12. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
@@ -707,113 +709,228 @@ Descripción &
 \section{13. Gestión de riesgos}
 \label{sec:riesgos}
 
-\begin{consigna}{red}
-a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
- 
-Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos de forma negativa)
-\begin{itemize}
-	\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de (O). 
-\end{itemize}   
+\subsection*{a) Identificación de los riesgos y estimación de consecuencias}
 
-Riesgo 2:
+Riesgo 1: fallo en la comunicación entre los dispositivos IoT y el servidor
+
 \begin{itemize}
-	\item Severidad (S): X.\\
-	Justificación...
-	\item Ocurrencia (O): Y.\\
-	Justificación...
+	\item Severidad (S): 8\\
+	Una interrupción en la comunicación impide la recolección de datos en tiempo real, afectando la utilidad del sistema para el monitoreo ambiental.
+	\item Ocurrencia (O): 6\\
+	Existe una probabilidad media-alta de ocurrencia debido a interferencias o problemas de cobertura en redes WiFi o LoRaWAN durante el prototipo.
 \end{itemize}
 
-Riesgo 3:
+Riesgo 2: sobrecarga de recursos en los dispositivos IoT
+
 \begin{itemize}
-	\item Severidad (S):  X.\\
-	Justificación...
-	\item Ocurrencia (O): Y.\\
-	Justificación...
+	\item Severidad (S): 8.\\
+	Si un nodo falla de forma inesperada, se pierde la continuidad del monitoreo, y puede interrumpirse la cadena de datos.
+	\item Ocurrencia (O): 6.\\
+	El ESP32, aunque potente, tiene limitaciones en RAM y CPU. Cargar múltiples sensores, comunicaciones paralelas y lógica de validación sin optimización puede llevar al cuelgue o reinicio del dispositivo.
 \end{itemize}
 
+Riesgo 3: problemas de compatibilidad entre sensores y microcontrolador
 
-b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
+\begin{itemize}
+	\item Severidad (S): 6.\\
+	Podría afectar la calidad de los datos o requerir modificaciones de hardware/software no planificadas.
+	\item Ocurrencia (O): 5.\\
+	Se eligieron sensores compatibles, pero pueden presentarse inconsistencias en las librerías o el consumo de energía.
+\end{itemize}
+
+Riesgo 4: saturación o malformación de datos sensados
+
+\begin{itemize}
+	\item Severidad (S): 7.\\
+	La mala interpretación de datos puede activar alertas falsas o provocar decisiones erróneas.
+	\item Ocurrencia (O): 6.\\
+	Es un riesgo común en sensores ambientales económicos o mal configurados.
+\end{itemize}
+
+Riesgo 5: fallo de los servicios de despliegue gratuito
+
+\begin{itemize}
+	\item Severidad (S): 7.\\
+	Una interrupción del entorno de ejecución \textit{cloud} o local durante una instancia crítica como pruebas, comprometería la validación del sistema en tiempo real.
+	\item Ocurrencia (O): 5.\\
+	Si bien los entornos pueden ser robustos, los errores de configuración, las restricciones presupuestarias en servicios \textit{cloud} gratuitos, o incluso errores en el runtime pueden generar indisponibilidad momentánea.
+\end{itemize}
+
+\subsection*{b) Tabla de gestión de riesgos}
 
 \begin{table}[htpb]
 \centering
 \begin{tabularx}{\linewidth}{@{}|X|c|c|c|c|c|c|@{}}
 \hline
 \rowcolor[HTML]{C0C0C0} 
-Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-\end{tabularx}%
+\textbf{Riesgo} & \textbf{S} & \textbf{O} & \textbf{RPN} & \textbf{S*} & \textbf{O*} & \textbf{RPN*} \\ \hline
+Fallo en comunicación IoT-servidor & 8 & 6 & 48 & 6 & 4 & 24 \\ \hline
+Sobrecarga de recursos en los dispositivos IoT & 8 & 6 & 48 & 6 & 4 & 24 \\ \hline
+Compatibilidad entre sensores y microcontrolador & 6 & 5 & 30 & 5 & 4 & 20 \\ \hline
+Saturación o malformación de datos sensados & 7 & 6 & 42 & 5 & 3 & 15 \\ \hline
+Fallo del servicio Render.com & 7 & 5 & 35 & 5 & 3 & 15 \\ \hline
+\end{tabularx}
+\caption{Evaluación de riesgos antes y después de la mitigación.}
 \end{table}
 
-Criterio adoptado: 
-
-Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a...
-
+Criterio adoptado: Se tomarán medidas de mitigación para todos los riesgos con RPN inicial mayor a 25. \\
 Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
 
-c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
- 
-Riesgo 1: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-  Nueva asignación de S y O, con su respectiva justificación:
-  \begin{itemize}
-	\item Severidad (S*): mientras más severo, más alto es el número (usar números del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O*): mientras más probable, más alto es el número (usar del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de (O).
-	\end{itemize}
 
-Riesgo 2: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
- 
-Riesgo 3: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
+\subsection*{c) Plan de mitigación}
 
-\end{consigna}
+Riesgo 1: fallo en la comunicación IoT-servidor
 
+Plan de mitigación: incluir mecanismos de reintento automático, logs de errores y pruebas en distintos entornos para validar la conectividad. Asegurar compatibilidad entre MQTT y LoRaWAN mediante brokers intermedios.
+
+\begin{itemize}
+	\item Severidad (S*): 6.\\ Se redujo al contar con validaciones de conectividad y almacenamiento temporal local.
+	\item Ocurrencia (O*): 4.\\ Disminuye al hacer pruebas exhaustivas y usar hardware probado.
+\end{itemize}
+
+Riesgo 2: sobrecarga de recursos en los dispositivos IoT
+
+Plan de mitigación: planificar tareas pequeñas, usar recursos de aprendizaje continuo y apoyo con herramientas de depuración. Reutilizar plantillas y librerías probadas.
+
+\begin{itemize}
+	\item Severidad (S*): 6.\\
+	Con mecanismos de autorrecuperación, el impacto se reduce.
+	\item Ocurrencia (O*): 4.\\
+	La probabilidad disminuye al optimizar el uso de memoria y mantener lógica desacoplada.
+\end{itemize}
+
+Riesgo 3: compatibilidad sensores - microcontrolador
+
+Plan de mitigación: testeo unitario anticipado y validación con ejemplos oficiales de MicroPython y C/C++. Uso de fuentes de alimentación externa para sensores que lo requieran.
+
+\begin{itemize}
+	\item Severidad (S*): 5.\\ El riesgo técnico se reduce con pruebas en laboratorio.
+	\item Ocurrencia (O*): 4.\\ Menor al contar con documentación adecuada y soporte de comunidad.
+\end{itemize}
+
+Riesgo 4: saturación o malformación de datos sensados
+
+Plan de mitigación: aplicar filtros de validación de rango en el \textit{firmware} (por ejemplo, descartar valores extremos o “nan”), así como lógica de suavizado o \textit{debounce} de señales antes de que lleguen al \textit{backend}.
+
+\begin{itemize}
+	\item Severidad (S*): 5.\\
+	Con validación previa se evita que el dato incorrecto afecte la plataforma.
+	\item Ocurrencia (O*): 3.\\
+	La probabilidad se reduce si se validan lecturas en \textit{firmware} + \textit{backend}.
+\end{itemize}
+Riesgo 5: Fallo del servicio
+
+Plan de mitigación: contar con una versión Dockerizada funcional del sistema que pueda ejecutarse localmente sin conexión a internet. Además, mantener backups de configuración en distintos proveedores y realizar ensayos de contingencia antes de la presentación.
+
+\begin{itemize}
+	\item Severidad (S*): 5.\\
+	El impacto se reduce al poder replicar la arquitectura localmente sin depender del servicio externo.
+	\item Ocurrencia (O*): 3.\\
+	La probabilidad disminuye al tener redundancia y pruebas previas del entorno final.
+\end{itemize}
 
 \section{14. Gestión de la calidad}
 \label{sec:calidad}
 
-\begin{consigna}{red}
-Elija al menos diez requerimientos que a su criterio sean los más importantes/críticos/que aportan más valor y para cada uno de ellos indique las acciones de verificación y validación que permitan asegurar su cumplimiento.
+A continuación, se detallan los requerimientos considerados críticos o de alto valor para el cumplimiento del objetivo del sistema, junto con sus acciones de verificación y validación.
 
-\begin{itemize} 
-\item Req \#1: copiar acá el requerimiento con su correspondiente número.
 
 \begin{itemize}
-	\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar.
-	\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar. 
-\end{itemize}
+	\item Req \# 1: el sistema deberá capturar datos ambientales a través de sensores conectados a dispositivos IoT.
+
+    \begin{itemize}
+	    \item Verificación: se probará cada sensor en condiciones controladas, comparando los valores con instrumentos de referencia o condiciones conocidas. Se revisará el \textit{firmware} del ESP32 para verificar que realiza lecturas correctas.
+	    \item Validación: se observará el comportamiento del sistema desde la interfaz web, verificando que los datos se actualizan en condiciones cambiantes (por ejemplo, al acercar una fuente de calor o CO2).
+    \end{itemize}
+
+	\item Req \# 2: el sistema deberá enviar los datos al servidor en tiempo real utilizando WiFi o LoRa/MQTT
+	\begin{itemize}
+		\item Verificación: se analizarán los paquetes enviados con herramientas como MQTT.fx o Mosquitto CLI, asegurando su frecuencia y estructura.
+		\item Validación: se revisará en el panel de usuario que los datos se actualicen en tiempo real tras un evento medible.
+	\end{itemize}
+	
+	\item Req \# 3: El sistema deberá almacenar los datos para su posterior análisis.
+	\begin{itemize}
+		\item Verificación: se inspeccionará directamente la base de datos para confirmar la correcta inserción de datos con marcas de tiempo y relaciones válidas.
+
+		\item Validación: se utilizará la interfaz para seleccionar un rango de fechas y verificar que se presentan correctamente los datos históricos.
+	\end{itemize}
+
+	\item Req \# 4: Se deberá ofrecer la opción de publicar los datos como privados o públicos.
+	\begin{itemize}
+		\item Verificación: se revisará el \textit{backend} para asegurar que se respeta el parámetro de visibilidad, y que la lógica de autorización limita el acceso a los datos según el estado de cada sensor o zona.
+		\item Validación: se probará la vista de invitado y se comprobará que no accede a datos privados.
+	\end{itemize}
+	
+	\item Req \# 5: El sistema deberá generar alertas si se superan umbrales definidos como peligrosos.
+	\begin{itemize}
+		\item Verificación: se forzarán lecturas fuera de rango para comprobar que la lógica de alertas se activa correctamente en el \textit{backend}.
+		\item Validación: se observará en la interfaz que se muestra una alerta clara y comprensible, con el parámetro afectado y el valor medido.
+	\end{itemize}
+	
+	\item Req \# 6: La plataforma deberá contar con una interfaz web responsiva.
+	\begin{itemize}
+		\item Verificación: se realizarán pruebas en múltiples resoluciones usando herramientas de desarrollo y emuladores, verificando adaptabilidad de cada componente.
+		\item Validación: se accederá a la plataforma desde distintos dispositivos y se confirmará con el usuario que la experiencia de uso es adecuada.
+	\end{itemize}
+	
+	\item Req \# 7: Los indicadores de calidad del aire deberán representarse mediante códigos de colores.
+	\begin{itemize}
+		\item Verificación: se revisará la lógica del frontend para confirmar que los colores asignados se corresponden con los rangos establecidos en normativa.
+		\item Validación: el usuario verá un panel que indique visualmente, por color, el estado ambiental de cada zona.
+	\end{itemize}
+	
+	\item Req \# 8: El usuario deberá poder registrar, editar y eliminar zonas de monitoreo.
+	\begin{itemize}
+		\item Verificación: se probarán los \textit{endpoints} de la API para operaciones CRUD en zonas y su impacto en la base de datos.
+		\item Validación: se confirmará, desde la interfaz, que se puede realizar la gestión de zonas sin errores, y que los cambios se reflejan inmediatamente.
+	\end{itemize}
+	
+	\item Req \# 9: El sistema deberá ejecutarse en un entorno Dockerizado portátil.
+	\begin{itemize}
+		\item Verificación: se construirá y ejecutará una imagen Docker del sistema, verificando su correcto funcionamiento desde CLI y logs del contenedor.
+		\item Validación: el contenedor se compartirá con un tercero para validar que el entorno puede reproducirse sin errores adicionales.
+	\end{itemize}
+	
+	\item Req \# 10: El visitante podrá visualizar datos públicos sin necesidad de registrarse.
+	\begin{itemize}
+		\item Verificación: se analizará el \textit{backend} y las consultas para comprobar que no se requiere token y que sólo se retornan datos públicos.
+		\item Validación: como invitado, se accederá a la vista pública y se confirmará que los datos se muestran correctamente y están limitados a la visibilidad asignada.
+	\end{itemize}
 
 \end{itemize}
-
-Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos, revisión de hojas de datos, consulta con expertos, mediciones, etc.  
-
-Las acciones de verificación suelen considerar al entregable como ``caja blanca'', es decir se conoce en profundidad su funcionamiento interno.  
-
-En cambio, las acciones de validación suelen considerar al entregable como ``caja negra'', es decir, que no se conocen los detalles de su funcionamiento interno.
-
-\end{consigna}
 
 \section{15. Procesos de cierre}    
 \label{sec:cierre}
 
-\begin{consigna}{red}
-Establecer las pautas de trabajo para realizar una reunión final de evaluación del proyecto, tal que contemple las siguientes actividades:
+Una vez concluido el proyecto, se establecerán las siguientes pautas de trabajo que permitirán evaluar su ejecución, registrar aprendizajes y agradecer la colaboración de los distintos interesados:
 
 \begin{itemize}
-	\item Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:\\
-	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento a aplicar. 
-	\item Identificación de las técnicas y procedimientos útiles e inútiles que se emplearon, los problemas que surgieron y cómo se solucionaron:\\
-	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento para dejar registro.
-	\item Indicar quién organizará el acto de agradecimiento a todos los interesados, y en especial al equipo de trabajo y colaboradores:\\
-	  - Indicar esto y quién financiará los gastos correspondientes.
+	\item Análisis del cumplimiento del Plan de Proyecto original: \\
+	\begin{itemize}
+		\item A cargo del {\authorname}, {\clientename} y {\supname} se revisará si las actividades definidas se completaron en los tiempos y alcances planificados. Se utilizará como referencia el diagrama de Gantt y los registros de avances documentados durante el desarrollo.
+		\item Se elaborará una síntesis comparativa entre lo planificado y lo realmente ejecutado, con observaciones sobre desviaciones y justificaciones correspondientes.
+		\item Este análisis será incluido en el informe final y presentado durante la reunión de cierre.
+		\item 
+    \end{itemize}		
+	   
+
+	\item Identificación de técnicas útiles, problemas y soluciones aplicadas:  \\
+	El {\authorname} también será responsable de redactar un informe reflexivo donde se detallen:
+	\begin{itemize}
+	    \item Las herramientas, tecnologías y metodologías que resultaron más eficaces para el desarrollo (por ejemplo, uso de Docker, modularización del backend, visualización en tiempo real).
+	    \item Aquellas que no aportaron valor o que presentaron dificultades significativas.
+	    \item Los principales problemas encontrados (como fallos en sensores o restricciones de conectividad) y las soluciones implementadas. 
+	\end{itemize}
+	Esta documentación quedará como anexo del proyecto y será publicada junto al repositorio para referencia futura.
+
+	\item Agradecimiento a interesados y colaboradores:  \\
+	\begin{itemize}
+	\item El {\authorname} se encargará de organizar el acto simbólico de agradecimiento a quienes participaron directa o indirectamente del proyecto, especialmente al director del trabajo final, al docente responsable, y a quienes brindaron apoyo técnico o institucional.  
+	\item Esta actividad se realizará al finalizar la defensa del proyecto, incluyendo un breve mensaje público y mención especial en la memoria. No se contemplan gastos financieros significativos, por lo que no se requiere asignación presupuestaria específica.
+    \end{itemize}		
+	
 \end{itemize}
 
-\end{consigna}
 
 \end{document}
